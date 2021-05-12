@@ -1,17 +1,12 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
 
 st.title('Streamlit 超入門')
-st.write('DateFlame')
 
-df = pd.DataFrame({
-    '一列目': [1, 2, 3, 4],
-    '二列目': [10, 20, 30, 40],
-})
+user_name = st.text_input("ユーザーネーム")
+'あなたのユーザーネームは:', user_name
 
-# st.write(df)
-# テキスト同様にデータフレームを表示させる場合はwrite
+user_pass = st.text_input('パスワード')
+'あなたのパスワードは：', user_pass
 
-st.dataframe(df, width=500, height=100)
-# DataFrameでも同じ表示ができるが、縦と横の長さが指定できる
+print(user_name)
+print(user_pass)
