@@ -4,5 +4,7 @@ import yfinance as yf
 
 aapl = yf.Ticker('AAPL')
 
-day = 20
-print(aapl.history(period=f'{day}d'))
+days = 20
+hist = aapl.history(period=f'{days}d')
+
+hist.reset_index()
